@@ -45,7 +45,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- 	select rnum, content, regdate, id, bbsno, rownum r -->
 <!-- 	FROM( -->
 <!-- 		select rnum, content, regdate, id, bbsno -->
-<!-- 		from REPLY -->
+<!-- 		from REPLY -->                                                                
 <!-- 		where bbsno = #{bbsno} -->
 <!-- 		order by rnum DESC -->
 <!--    ) -->

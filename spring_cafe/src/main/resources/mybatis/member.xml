@@ -2,112 +2,112 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mmember">
-<!-- <select id="loginCheck" parameterType="Map" resultType="int"> -->
-<!--   	SELECT count(*) as cnt -->
-<!--   	FROM member -->
-<!--   	WHERE      id = #{id} -->
-<!--   	AND    passwd = #{passwd} -->
-<!-- </select> -->
-<!-- <select id="getGrade" parameterType="String" resultType="String"> -->
-<!--     SELECT grade FROM member -->
-<!--     WHERE id = #{id} -->
-<!-- </select> -->
-<!-- <update id="updatePasswd" parameterType="Map"> -->
-<!-- 	UPDATE  member -->
-<!-- 	SET     passwd = #{passwd} -->
-<!-- 	WHERE   id     = #{id} -->
-<!-- </update> -->
-<!-- <update id="updateFile" parameterType="Map"> -->
-<!--     UPDATE  member -->
-<!--     SET     fname = #{filename} -->
-<!--     WHERE   id    = #{id} -->
-<!-- </update> -->
-<!-- <update id="update" parameterType="MemberDTO"> -->
-<!-- 	UPDATE member                                                      -->
-<!-- 	SET mname	 = #{mname},  -->
-<!-- 		tel		 = #{tel},  -->
-<!-- 		email	 = #{email},  -->
-<!-- 		zipcode	 = #{zipcode},  -->
-<!-- 		address1 = #{address1},  -->
-<!-- 		address2 = #{address2},  -->
-<!-- 		job		 = #{job} -->
-<!-- 	WHERE id = #{id}                                                        -->
-<!-- </update> -->
-<!-- <select id="getFname" parameterType="String" resultType="String"> -->
-<!-- 	SELECT fname FROM member -->
-<!-- 	WHERE id = #{id} -->
-<!-- </select> -->
-<!-- <delete id="delete" parameterType="String"> -->
-<!-- 	DELETE FROM member -->
-<!-- 	WHERE id = #{id} -->
-<!-- </delete> -->
-<!-- <select id="zipcode" parameterType="String" resultType="ZipcodeDTO"> -->
-<!-- 	SELECT zipcode, sido, gugun, dongli, etc -->
-<!-- 	FROM zipcode                           -->
-<!-- 	WHERE (dongli LIKE '%' || #{dongli} || '%')    -->
-<!-- 	ORDER BY sido, gugun, dongli           -->
-<!-- </select> -->
-<!-- <select id="checkId" parameterType="String" resultType="int"> -->
-<!-- 	SELECT COUNT(*) as cnt -->
-<!-- 	FROM member         -->
-<!-- 	WHERE id=#{id}          -->
-<!-- </select> -->
-<!-- <select id="checkEmail" parameterType="String" resultType="int"> -->
-<!-- 	SELECT COUNT(*) as cnt -->
-<!-- 	FROM member         -->
-<!-- 	WHERE email=#{email}  -->
-<!-- </select> -->
-<!-- <insert id="create" parameterType="MemberDTO"> -->
-<!-- 	INSERT INTO member(id, passwd, mname, tel, email, zipcode, -->
-<!--                    address1, address2, job, wdate, fname, grade) -->
-<!-- 	VALUES(#{id}, #{passwd}, #{mname}, #{tel}, #{email}, #{zipcode}, -->
-<!-- 	       #{address1}, #{address2}, #{job}, sysdate, #{fname}, 'H')           -->
-<!-- </insert> -->
-<!-- <select id="read" parameterType="String" resultType="MemberDTO"> -->
-<!-- 	SELECT * FROM member -->
-<!-- 	WHERE id = #{id} -->
-<!-- </select> -->
-<!-- <select id="total" parameterType="Map" resultType="int"> -->
-<!-- 	SELECT COUNT(*) FROM member -->
-<!-- 	<where> -->
-<!-- 	<choose> -->
-<!-- 	<when test="col=='mname'"> -->
-<!-- 		mname LIKE '%' || #{word} || '%' -->
-<!-- 	</when> -->
-<!-- 	<when test="col=='id'"> -->
-<!-- 		id LIKE '%' || #{word} || '%' -->
-<!-- 	</when> -->
-<!-- 	<when test="col=='email'"> -->
-<!-- 		email LIKE '%' || #{word} || '%' -->
-<!-- 	</when>	 -->
-<!-- 	</choose>	 -->
-<!-- 	</where> -->
-<!-- </select> -->
-<!-- <select id="list" parameterType="Map" resultType="MemberDTO"> -->
-<!-- 	SELECT id, mname, tel, email, address1, address2, fname, r           -->
-<!-- 	FROM(                                                                -->
-<!--    		 SELECT id, mname, tel, email, address1, address2, fname, rownum r  -->
-<!--     	 FROM(                                                           -->
-<!--      		SELECT id, mname, tel, email, address1, address2, fname        -->
-<!--      		FROM member -->
-<!--      		<where> -->
-<!-- 			<choose> -->
-<!-- 			<when test="col=='mname'"> -->
-<!-- 				mname LIKE '%' || #{word} || '%' -->
-<!-- 			</when> -->
-<!-- 			<when test="col=='id'"> -->
-<!-- 				id LIKE '%' || #{word} || '%' -->
-<!-- 			</when> -->
-<!-- 			<when test="col=='email'"> -->
-<!-- 				email LIKE '%' || #{word} || '%' -->
-<!-- 			</when>	 -->
-<!-- 			</choose>	 -->
-<!-- 			</where>		 -->
-<!--             ORDER BY id ASC   -->
-<!--           )    -->
-<!--     <![CDATA[                   -->
+<mapper namespace="member">
+<select id="loginCheck" parameterType="Map" resultType="int">
+  	SELECT count(*) as cnt
+  	FROM member
+  	WHERE      id = #{id}
+  	AND    passwd = #{passwd}
+</select>
+<select id="getGrade" parameterType="String" resultType="String">
+    SELECT grade FROM member
+    WHERE id = #{id}
+</select>
+<update id="updatePasswd" parameterType="Map">
+	UPDATE  member
+	SET     passwd = #{passwd}
+	WHERE   id     = #{id}
+</update>
+<update id="updateFile" parameterType="Map">
+    UPDATE  member
+    SET     fname = #{filename}
+    WHERE   id    = #{id}
+</update>
+<update id="update" parameterType="MemberDTO">
+	UPDATE member                                                     
+	SET mname	 = #{mname}, 
+		tel		 = #{tel}, 
+		email	 = #{email}, 
+		zipcode	 = #{zipcode}, 
+		address1 = #{address1}, 
+		address2 = #{address2}, 
+		job		 = #{job}
+	WHERE id = #{id}                                                       
+</update>
+<select id="getFname" parameterType="String" resultType="String">
+	SELECT fname FROM member
+	WHERE id = #{id}
+</select>
+<delete id="delete" parameterType="String">
+	DELETE FROM member
+	WHERE id = #{id}
+</delete>
+<select id="zipcode" parameterType="String" resultType="ZipcodeDTO">
+	SELECT zipcode, sido, gugun, dongli, etc
+	FROM zipcode                          
+	WHERE (dongli LIKE '%' || #{dongli} || '%')   
+	ORDER BY sido, gugun, dongli          
+</select>
+<select id="checkId" parameterType="String" resultType="int">
+	SELECT COUNT(*) as cnt
+	FROM member        
+	WHERE id=#{id}         
+</select>
+<select id="checkEmail" parameterType="String" resultType="int">
+	SELECT COUNT(*) as cnt
+	FROM member        
+	WHERE email=#{email} 
+</select>
+<insert id="create" parameterType="MemberDTO">
+	INSERT INTO member(id, passwd, mname, tel, email, zipcode,
+                   address1, address2, job, wdate, fname, grade)
+	VALUES(#{id}, #{passwd}, #{mname}, #{tel}, #{email}, #{zipcode},
+	       #{address1}, #{address2}, #{job}, sysdate, #{fname}, 'H')          
+</insert>
+<select id="read" parameterType="String" resultType="MemberDTO">
+	SELECT * FROM member
+	WHERE id = #{id}
+</select>
+<select id="total" parameterType="Map" resultType="int">
+	SELECT COUNT(*) FROM member
+	<where>
+	<choose>
+	<when test="col=='mname'">                                                        
+		mname LIKE '%' || #{word} || '%'
+	</when>
+	<when test="col=='id'">
+		id LIKE '%' || #{word} || '%'
+	</when>
+	<when test="col=='email'">
+		email LIKE '%' || #{word} || '%'
+	</when>	
+	</choose>	
+	</where>
+</select>
+<select id="list" parameterType="Map" resultType="MemberDTO">
+	SELECT id, mname, tel, email, address1, address2, fname, r          
+	FROM(                                                               
+   		 SELECT id, mname, tel, email, address1, address2, fname, rownum r 
+    	 FROM(                                                          
+     		SELECT id, mname, tel, email, address1, address2, fname       
+     		FROM member
+     		<where>
+			<choose>
+			<when test="col=='mname'">
+				mname LIKE '%' || #{word} || '%'
+			</when>
+			<when test="col=='id'">
+				id LIKE '%' || #{word} || '%'
+			</when>
+			<when test="col=='email'">
+				email LIKE '%' || #{word} || '%'
+			</when>	
+			</choose>	
+			</where>		
+            ORDER BY id ASC  
+          )   
+    <![CDATA[                  
 <!--     )WHERE r >= #{sno} AND r <= #{eno} 	 -->
 <!--     ]]>	                                                  -->
-<!-- </select> -->
+</select>
 </mapper>
