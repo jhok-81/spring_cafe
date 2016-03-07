@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE  tiles-definitions PUBLIC 
+    "-//Aapche Software Foundation//DTD Tiles Configuration 2.0//EN" 
+    "http://tiles.apache.org/dtds/tiles-config_2_0.dtd"> 
+
+<tiles-definitions> 
+   	<definition name="/member/list" extends="main"> 
+        <put-attribute name="title" value="회원목록" ></put-attribute> 
+        <put-attribute name="body" value="/WEB-INF/views/admin/list.jsp" /> 
+    </definition> 
+<!-- 	<definition name="/member/read" extends="main">  -->
+<!--         <put-attribute name="title" value="회원정보" ></put-attribute>  -->
+<!--         <put-attribute name="body" value="/WEB-INF/views/member/read.jsp" />  -->
+<!--     </definition>    -->
+<!--     <definition name="/member/login" extends="main">  -->
+<!--         <put-attribute name="title" value="로그인" ></put-attribute>  -->
+<!--         <put-attribute name="body" value="/WEB-INF/views/member/loginForm.jsp" />  -->
+<!--     </definition>    -->
+<!--     <definition name="/member/create" extends="main">  -->
+<!--         <put-attribute name="title" value="회원가입" ></put-attribute>  -->
+<!--         <put-attribute name="body" value="/WEB-INF/views/member/createForm1.jsp" />  -->
+<!--     </definition>    -->
+<!--     <definition name="/member/update" extends="main">  -->
+<!--         <put-attribute name="title" value="정보수정" ></put-attribute>  -->
+<!--         <put-attribute name="body" value="/WEB-INF/views/member/updateForm.jsp" />  -->
+<!--     </definition>   -->
+<!--     <definition name="/member/updateFile" extends="main">  -->
+<!--         <put-attribute name="title" value="사진수정" ></put-attribute>  -->
+<!--         <put-attribute name="body" value="/WEB-INF/views/member/updateFileForm.jsp" />  -->
+<!--     </definition> -->
+<!--     <definition name="/member/updatePasswd" extends="main">  -->
+<!--         <put-attribute name="title" value="비번수정" ></put-attribute>  -->
+<!--         <put-attribute name="body" value="/WEB-INF/views/member/updatePasswdForm.jsp" />  -->
+<!--     </definition> -->
+<!--     <definition name="/member/delete" extends="main">  -->
+<!--         <put-attribute name="title" value="회원탈퇴" ></put-attribute>  -->
+<!--         <put-attribute name="body" value="/WEB-INF/views/member/deleteForm.jsp" />  -->
+<!--     </definition>  -->
+<!--     <definition name="/member/agree" extends="main">  -->
+<!--         <put-attribute name="title" value="약관동의" ></put-attribute>  -->
+<!--         <put-attribute name="body" value="/WEB-INF/views/member/agreement.jsp" />  -->
+<!--     </definition>            -->
+</tiles-definitions> 
+
+
+
