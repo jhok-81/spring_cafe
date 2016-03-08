@@ -9,6 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   	WHERE      id = #{id}
   	AND    passwd = #{passwd}
 </select>
+
 <select id="getGrade" parameterType="String" resultType="String">
     SELECT grade FROM member
     WHERE id = #{id}
